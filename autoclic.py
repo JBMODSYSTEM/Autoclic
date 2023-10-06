@@ -8,29 +8,33 @@ import win32api, win32con
 #-*-*-*-*-*-*-*-*-*-*-*-*-*-* Funcion para el click *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 def click(x,y): 
     win32api.SetCursorPos((x,y)) #----------------------------------> Posicion del cursor
-    time.sleep(0.5) #-----------------------------------------------> Tiempo antes de precionar el boton del mouse luego de posicionarse
+    time.sleep(0.03) #-----------------------------------------------> Tiempo antes de precionar el boton del mouse luego de posicionarse
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0) #-------> Boton precionado del mouse
-    time.sleep(0.05) #----------------------------------------------> Tiempo de ejecucion entre precionar y soltar boton del mouse
+    time.sleep(0.03) #----------------------------------------------> Tiempo de ejecucion entre precionar y soltar boton del mouse
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0) #---------> Boton suelto del mouse
-    time.sleep(0.1) #-----------------------------------------------> Descanso entre cliks 
+    time.sleep(0.05) #-----------------------------------------------> Descanso entre cliks 
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0) #-------> Boton precionado del mouse
-    time.sleep(0.05) #----------------------------------------------> Tiempo de ejecucion entre precionar y soltar boton del mouse
+    time.sleep(0.03) #----------------------------------------------> Tiempo de ejecucion entre precionar y soltar boton del mouse
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0) #---------> Boton suelto del mouse
+
 
 def temporizador():
     while 2 == 2 :
         time.sleep(600)
-        click(5158,63)
+        click(3422, 84)
         time.sleep(1)
-        click(3926,97)
+        click(3017, 122)
+
 
 def exitprog():
     root.destroy()
+
 
 root = Tk()
 frame = Frame(root)
 frame.pack()
 frame.config(width=60,height=50)
+
 
 Button(root, text = "Iniciar", command=temporizador).pack(side=LEFT)
 Button(root, text = "Cerrar", command=exitprog).pack(side=LEFT)
@@ -38,9 +42,6 @@ Button(root, text = "Cerrar", command=exitprog).pack(side=LEFT)
 
 root.wm_attributes("-topmost", True) # Esta es la línea importante de superposicion de pantalla .
 root.mainloop()
-
-
-
 
 
 
