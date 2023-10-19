@@ -21,9 +21,9 @@ def click(x,y):
 def temporizador():
     while 2 == 2 :
         time.sleep(600)
-        click(3422, 84)
+        click(141,104)
         time.sleep(1)
-        click(3017, 122)
+        click(197, 205)
 
 
 def exitprog():

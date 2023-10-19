@@ -1,0 +1,13 @@
+pynput
+#importante tenerle actualizado.
+#python -m pip install --upgrade pip
+scikit-build
+opencv-python
+numpy
+python3_xlib
+pyautogui
+mss
+pytesseract
+screen_search
+# para python3.7 en ubuntu necesairo es necesario.
+#sudo apt-get install python3.7-tk
